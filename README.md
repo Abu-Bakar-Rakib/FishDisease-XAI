@@ -84,15 +84,15 @@ Regularized MLP Head
 **Source:** [Kaggle — Freshwater Fish Disease (South Asia)](https://www.kaggle.com/datasets/subirbiswas19/freshwater-fish-disease-aquaculture-in-south-asia)
 
 ### 7 Disease Classes
-| # | Disease | Type | Severity |
-|---|---------|------|----------|
-| 1 | Aeromoniasis | 🦠 Bacterial | Moderate |
-| 2 | Bacterial Gill Disease | 🦠 Bacterial | High |
-| 3 | Bacterial Red Disease | 🦠 Bacterial | High |
-| 4 | Saprolegniasis | 🍄 Fungal | Moderate |
-| 5 | Healthy Fish | ✅ N/A | — |
-| 6 | Parasitic Disease | 🪱 Parasitic | Moderate |
-| 7 | White Tail Disease | 🦠 Viral | Moderate |
+| # | Disease | Type |
+|---|---------|------|
+| 1 | Aeromoniasis | 🦠 Bacterial |
+| 2 | Bacterial Gill Disease | 🦠 Bacterial |
+| 3 | Bacterial Red Disease | 🦠 Bacterial |
+| 4 | Saprolegniasis | 🍄 Fungal |
+| 5 | Healthy Fish | ✅ N/A |
+| 6 | Parasitic Disease | 🪱 Parasitic |
+| 7 | White Tail Disease | 🦠 Viral |
 
 **Dataset Split:**
 - 1,400 training images (200/class) → 15% stratified validation split
@@ -242,20 +242,6 @@ pip install torch torchvision timm grad-cam scikit-learn pandas matplotlib
 
 ---
 
-## 📁 Repository Structure
-
-```
-FishDisease-XAI/
-├── fish-disease-cbam-xai.ipynb    # Main notebook
-├── README.md                        # This file
-├── LICENSE                          # MIT License
-└── [outputs/]                       # Generated artifacts
-    ├── metrics/                     # JSON summaries
-    ├── plots/                       # Performance visualizations
-    └── xai/                         # Explainability overlays
-```
-
----
 
 ## 🔧 Advanced Features
 
@@ -274,21 +260,6 @@ FishDisease-XAI/
 ✔️ **Veterinary Clinics** — Diagnostic support for fish health assessments  
 ✔️ **Research** — Benchmark for XAI in aquaculture  
 ✔️ **Education** — Teaching interpretable deep learning  
-
----
-
-## 📖 Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@project{fishdisease_xai_2024,
-  title={FishDisease-XAI: Attention-Guided Deep Learning for Aquaculture},
-  author={Abu-Bakar Rakib},
-  year={2024},
-  url={https://github.com/Abu-Bakar-Rakib/FishDisease-XAI}
-}
-```
 
 ---
 
