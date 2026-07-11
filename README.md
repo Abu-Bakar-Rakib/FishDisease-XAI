@@ -73,9 +73,8 @@ Trained for 14 epochs before early stopping (patience = 7 on validation macro-F1
 **Training curves:** train/val loss converge smoothly with no significant overfitting gap; validation macro-F1 climbs sharply in the first 4 epochs (0.81 → 0.98) before plateauing, consistent with a well-regularized fine-tuning run on a fully pretrained backbone.
 
 <img width="1650" height="600" alt="proposed_CBAM_EffNetV2_training_curve" src="https://github.com/user-attachments/assets/522d1e59-f48e-44fe-a547-fee3d833110f" />
-
-![ROC-AUC](outputs/proposed_CBAM_EffNetV2_roc_auc.png)
-![Confusion matrix](outputs/proposed_CBAM_EffNetV2_confusion_counts.png)
+<img width="1036" height="883" alt="proposed_CBAM_EffNetV2_confusion_counts" src="https://github.com/user-attachments/assets/7d9b8fe8-4910-4482-b5c5-56ecd87aafb7" />
+<img width="1034" height="881" alt="proposed_CBAM_EffNetV2_roc_auc" src="https://github.com/user-attachments/assets/db908f27-e029-4d49-9eeb-d277377e1fc8" />
 
 ---
 
@@ -91,7 +90,8 @@ All three methods consistently localize attention on the diseased/anatomical reg
 
 Notably, the one Saprolegniasis sample shown was **misclassified as White Tail disease** — matching the single Saprolegniasis error seen in the confusion matrix above. All three CAM methods still focus on the fish's body rather than background, which is useful for debugging: the model is attending to the right *object*, but the visual cue it's keying on doesn't distinguish this fungal case correctly. This kind of failure case is exactly what the XAI overlays are meant to surface.
 
-![Combined XAI grid](outputs/proposed_CBAM_EffNetV2_xai_all.png)
+<img width="2315" height="4179" alt="proposed_CBAM_EffNetV2_xai_all" src="https://github.com/user-attachments/assets/7318c293-f88f-4325-b6c2-09bfc9e3a33a" />
+
 
 These overlays are intended to give veterinarians and aquaculture practitioners visual insight into *why* the model reached a given diagnosis, rather than treating it as a black box.
 
@@ -138,10 +138,6 @@ For each of the 8 models:
 - `{model}_calibration.png` — reliability diagram with ECE
 - `{model}_training_curve.png` — train/val loss and val macro-F1 per epoch
 
-Across all models:
-
-- `comparison_all_models.csv` — sorted comparison table (by test macro-F1)
-- `comparison_macro_f1.png` — horizontal bar chart of test macro-F1 across models
 
 For the proposed model only:
 
