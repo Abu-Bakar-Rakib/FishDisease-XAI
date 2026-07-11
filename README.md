@@ -65,6 +65,26 @@ Trained for 14 epochs before early stopping (patience = 7 on validation macro-F1
 | Macro AUC (avg. one-vs-rest) | ~0.9999 |
 | Micro AUC | 0.9999 |
 | Errors | 4 / 700 |
+**Class-wise performance (test set):**
+
+| Class | Precision | Recall | F1-score | Support |
+|---|---|---|---|---|
+| Bacterial Red disease | 0.9901 | 1.0000 | 0.9950 | 100 |
+| Bacterial diseases – Aeromoniasis | 1.0000 | 0.9900 | 0.9950 | 100 |
+| Bacterial gill disease | 1.0000 | 0.9900 | 0.9950 | 100 |
+| Fungal diseases – Saprolegniasis | 0.9802 | 0.9900 | 0.9851 | 100 |
+| Healthy Fish | 1.0000 | 1.0000 | 1.0000 | 100 |
+| Parasitic diseases | 1.0000 | 0.9900 | 0.9950 | 100 |
+| Viral diseases – White tail disease | 0.9901 | 1.0000 | 0.9950 | 100 |
+| **Accuracy** | | | **0.9943** | **700** |
+| **Macro avg** | 0.9943 | 0.9943 | 0.9943 | 700 |
+| **Weighted avg** | 0.9943 | 0.9943 | 0.9943 | 700 |
+
+**Class-level notes:**
+- **Healthy Fish** is classified perfectly (F1 = 1.0000) — no false positives or false negatives.
+- **Saprolegniasis (fungal)** is the weakest class (F1 = 0.9851, precision 0.9802) — it receives the most false positives, consistent with the confusion matrix showing other classes occasionally misclassified into this bucket.
+- All other classes achieve F1 ≥ 0.9950, with only a single missed sample (recall 0.9900) each — reflecting the 4 total misclassifications out of 700 test images.
+
 
 **Confusion matrix highlights:** 4 total misclassifications out of 700 test images — 1 Aeromoniasis → Bacterial Red disease, 1 Bacterial Gill disease → Saprolegniasis, 1 Saprolegniasis → White Tail disease, 1 Parasitic disease → Saprolegniasis. All other classes were classified perfectly (100/100).
 
