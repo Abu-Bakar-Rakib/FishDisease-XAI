@@ -72,7 +72,8 @@ Trained for 14 epochs before early stopping (patience = 7 on validation macro-F1
 
 **Training curves:** train/val loss converge smoothly with no significant overfitting gap; validation macro-F1 climbs sharply in the first 4 epochs (0.81 → 0.98) before plateauing, consistent with a well-regularized fine-tuning run on a fully pretrained backbone.
 
-![Training curve](outputs/proposed_CBAM_EffNetV2_training_curve.png)
+<img width="1650" height="600" alt="proposed_CBAM_EffNetV2_training_curve" src="https://github.com/user-attachments/assets/522d1e59-f48e-44fe-a547-fee3d833110f" />
+
 ![ROC-AUC](outputs/proposed_CBAM_EffNetV2_roc_auc.png)
 ![Confusion matrix](outputs/proposed_CBAM_EffNetV2_confusion_counts.png)
 
