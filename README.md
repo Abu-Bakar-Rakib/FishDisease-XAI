@@ -65,8 +65,10 @@ Trained for 14 epochs before early stopping (patience = 7 on validation macro-F1
 | Macro AUC (avg. one-vs-rest) | ~0.9999 |
 | Micro AUC | 0.9999 |
 | Errors | 4 / 700 |
-**Class-wise performance (test set):**
 
+
+
+**Class-wise performance (test set):**
 | Class | Precision | Recall | F1-score | Support |
 |---|---|---|---|---|
 | Bacterial Red disease | 0.9901 | 1.0000 | 0.9950 | 100 |
